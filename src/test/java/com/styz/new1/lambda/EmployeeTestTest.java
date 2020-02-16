@@ -5,7 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
@@ -17,11 +21,11 @@ public class EmployeeTestTest {
         employers.addAll(
                 Arrays.asList(
                         new Employer("zhangsan",20,5733.34),
-                        new Employer("lisi",28,2733.34),
+                        new Employer("lisi",17,2733.34),
                         new Employer("wangwu",32,2333.45),
                         new Employer("lili",35,6703.4),
                         new Employer("hanmei",45,4543.89),
-                        new Employer("lili",32,9033.23),
+                        new Employer("lili",15,9033.23),
                         new Employer("xilz",35,3567.45)
                 )
         );
@@ -68,8 +72,37 @@ public class EmployeeTestTest {
         employers.stream().map(x->x.getName()).forEach(System.out::println);
         //2 利用方法引用获取名字
         employers.stream().map(Employer::getName).forEach(System.out::println);
+        employers.stream().filter(x->x.getAge()>30).peek(x-> System.out.println(x.getAge())).forEach(System.out::println);
+        //判断员工是否全部大于20岁
+        boolean ret = employers.stream().allMatch(x -> x.getAge() > 20);
+        System.out.println("员工是否都满足大于20岁："+ ret);
+        boolean ret1 = employers.stream().anyMatch(x -> x.getAge() > 20);
+        System.out.println("员工是否存在大于20岁："+ ret1);
+        boolean ret2 = employers.stream().noneMatch(x -> x.getAge() > 60);
+        System.out.println("员工是否存在大于60岁："+ ret2);
+        //满足大于20岁员工的第一位员工
+        Optional<Employer> first = employers.stream().filter(x -> x.getAge() > 20).findFirst();
 
+        // 获取年龄最大的员工
+        Optional<Employer> max = employers.stream().max((x, y) -> Math.max(x.getAge(), y.getAge()));
+        //找出员工中名字最长的
+        Optional<Employer> reduce = employers.stream().reduce((s1, s2) -> s1.getName().length() >= s2.getName().length() ? s1 : s2);
 
+    }
+
+    @Test
+    public void test7() {
+        Stream<Integer> nums = Stream.iterate(0, x -> x + 1).limit(10);
+        Integer reduce = nums.reduce(0, (x, y) -> x + y);
+        System.out.println(reduce);
+        Stream<Integer> nums1 = Stream.iterate(0, x -> x + 1).limit(10);
+        Integer reduce1 = nums1.reduce(0, (x,y)->x+1+y ,(x, y) -> x + y+10);
+        System.out.println(reduce1);
+        List<Integer> integerList = new ArrayList<>(100);
+        for(int i = 1;i <= 10;i++) { integerList.add(i);
+        }
+        Integer reduce2 = integerList.parallelStream().reduce(0, (x, y) -> x + 1 + y, (x, y) -> x + y);
+        System.out.println(reduce2);
     }
 
     @Test
@@ -98,6 +131,35 @@ public class EmployeeTestTest {
             if(x.getSalary()>=y.getSalary())return -1;else return 1;
         }).limit(2).forEach(System.out::println);
 
+    }
+
+    @Test
+    public void Test8() {
+        List<Employer> list = employers.stream().filter(x -> x.getAge() > 30).collect(Collectors.toList());
+        list.stream().forEach(System.out::println);
+        //获取大于30岁员工不同的人
+        Set<String> set = employers.stream().filter(x -> x.getAge() > 30).map(Employer::getName).collect(Collectors.toSet());
+        System.out.println(set);
+        Set<Object> seen = ConcurrentHashMap.newKeySet();
+        Map<String, Employer> collect = employers.stream().filter(x -> {
+            return seen.add(x.getName());
+        }).collect(Collectors.toMap(x -> x.getName(), x -> x));
+//        Map<String, Employer> collect1 = employers.stream().filter(x -> x.getAge() > 30).collect(Collectors.toMap(x -> x.getName(), Function.identity()));
+        //公司员工的平均年纪
+        Double average = employers.stream().collect(Collectors.averagingDouble(Employer::getAge));
+        //公司年纪最大的员工年纪
+        Optional<Integer> maxAge2 = employers.stream().map(Employer::getAge).collect(Collectors.maxBy(Integer::compareTo));
+        Optional<Integer> minAge2 = employers.stream().map(Employer::getAge).collect(Collectors.minBy(Integer::compareTo));
+        //求总人数
+        Long number = employers.stream().collect(Collectors.counting());
+        //求总薪水
+        Double salarys = employers.stream().collect(Collectors.summingDouble(Employer::getSalary));
+        //名字相同的的员工分为一组
+        Map<String, List<Employer>> map = employers.stream().collect(Collectors.groupingBy(x -> x.getName()));
+        //成年人分到一组，未成年分到一组
+        Map<Boolean, List<Employer>> collect1 = employers.stream().collect(Collectors.partitioningBy(x -> x.getAge() > 18));
+
+        String collect2 = employers.stream().map(Employer::getName).collect(Collectors.joining(","));
     }
 
     @Test

@@ -6,7 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="jdk8new" />
+        <module name="jdk11new" />
+        <module name="jdk7new" />
+        <module name="jdk9new" />
+        <module name="jdk8new1" />
+        <module name="jdk10new" />
       </profile>
     </annotationProcessing>
   </component>

@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce76a0b1-fb42-4ca7-b9c1-c7fa4bdfc1fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/jdk8new.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/styz/new1/Employer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/styz/new1/lambda/DemoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/styz/new1/lambda/MyWorker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/styz/new1/lambda/Person.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/styz/new1/lambda/WokrerPerson.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/styz/new1/lambda/EmployeeTestTest.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk10new/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk11new/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk7new/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk8new.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk8new1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk9new/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/styz/new1/lambda/MyWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/styz/new1/lambda/MyWorker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/styz/new1/lambda/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/styz/new1/lambda/EmployeeTestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/styz/new1/lambda/EmployeeTestTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,12 +58,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.147929" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
@@ -83,9 +89,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeTestTest.test6">
-    <configuration name="EmployeeTestTest.test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdk8new" />
+  <component name="RunManager" selected="JUnit.EmployeeTestTest.Test8">
+    <configuration name="EmployeeTestTest.Test8" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdknew" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.styz.new1.lambda.*" />
@@ -94,14 +100,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.styz.new1.lambda" />
       <option name="MAIN_CLASS_NAME" value="com.styz.new1.lambda.EmployeeTestTest" />
-      <option name="METHOD_NAME" value="test3" />
+      <option name="METHOD_NAME" value="Test8" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeTestTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdk8new" />
+    <configuration name="EmployeeTestTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdknew" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.styz.new1.lambda.*" />
@@ -110,30 +116,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.styz.new1.lambda" />
       <option name="MAIN_CLASS_NAME" value="com.styz.new1.lambda.EmployeeTestTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeTestTest.test5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdk8new" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.styz.new1.lambda.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.styz.new1.lambda" />
-      <option name="MAIN_CLASS_NAME" value="com.styz.new1.lambda.EmployeeTestTest" />
-      <option name="METHOD_NAME" value="test5" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="EmployeeTestTest.test6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdk8new" />
+      <module name="jdknew" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.styz.new1.lambda.*" />
@@ -148,8 +138,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="EmployeeTestTest.test7" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="jdknew" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.styz.new1.lambda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.styz.new1.lambda" />
+      <option name="MAIN_CLASS_NAME" value="com.styz.new1.lambda.EmployeeTestTest" />
+      <option name="METHOD_NAME" value="test7" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EmployeeTestTest.toLong" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="jdk8new" />
+      <module name="jdknew" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.styz.new1.lambda.*" />
@@ -164,13 +170,60 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="jdknew" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="jdknew" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeTestTest.Test8" />
+        <item itemvalue="JUnit.EmployeeTestTest.test7" />
+        <item itemvalue="JUnit.EmployeeTestTest.test2" />
         <item itemvalue="JUnit.EmployeeTestTest.test6" />
         <item itemvalue="JUnit.EmployeeTestTest.toLong" />
-        <item itemvalue="JUnit.EmployeeTestTest.test5" />
-        <item itemvalue="JUnit.EmployeeTestTest.test4" />
-        <item itemvalue="JUnit.EmployeeTestTest.test3" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +242,7 @@
       <updated>1581140384085</updated>
       <workItem from="1581140391909" duration="26635000" />
       <workItem from="1581297864922" duration="2251000" />
-      <workItem from="1581740994919" duration="1050000" />
+      <workItem from="1581740994919" duration="31659000" />
     </task>
     <servers />
   </component>
@@ -283,7 +336,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/styz/new1/lambda/EmployeeTestTest.java</url>
-          <line>63</line>
+          <line>67</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
